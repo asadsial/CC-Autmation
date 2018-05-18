@@ -1,0 +1,31 @@
+// This code is to login on the WEB 
+package com.selen;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;  // this is for mozila
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class SeleWebDr {
+	public static void main(String[] args) {
+		System.out.print("Test");
+		//System.setProperty("webdriver.gecko.driver","C:\\gecko\\geckodriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\gecko\\chromedriver.exe");
+		//WebDriver fdriver = new FirefoxDriver(); //This is for Mozila
+		//WebDriver fdriver = new FirefoxDriver();
+		WebDriver cdriver = new ChromeDriver();
+		//fdriver.get("https://www.lynda.com/Selenium-tutorials/Mastering-Selenium-Testing-Tools/521207-2.html");
+		cdriver.get("https://URL");
+		cdriver.findElement(By.id("username")).sendKeys("UserName");
+		cdriver.findElement(By.id("password")).sendKeys("Password");
+		cdriver.findElement(By.id("login")).click();
+		cdriver.findElement(By.id("Create New")).click();
+		
+
+		cdriver.quit();
+		
+		
+	}
+
+}
